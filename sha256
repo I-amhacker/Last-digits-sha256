@@ -1,0 +1,12 @@
+import hashlib
+number = 0
+while True:
+    number = number + 1
+#Enter your text instead of text
+    data = 'text' + str(number)
+    m = hashlib.sha256()
+    m.update(data.encode('utf-8'))
+    hash = m.hexdigest()
+    if hash[-5:] == '12345':
+        print(data)
+        breakm
